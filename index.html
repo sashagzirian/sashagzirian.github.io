@@ -6,6 +6,29 @@
   <title>Sasha Gzirian</title>
   <meta name="description" content="Sasha Gzirian. Brooklyn-based product manager.">
   <style>
+    /* ===================================================== */
+    /*  ADJUSTABLE TEXT SIZES                                */
+    /*  Every text size on the page lives here.              */
+    /*  Change a number, the page updates. 1rem = 18px.      */
+    /*  In Chrome: Inspect, click the <html> element, and    */
+    /*  edit these values live in the Styles panel.          */
+    /* ===================================================== */
+    :root {
+      --size-name:    2rem;      /* "Sasha Gzirian" heading        */
+      --size-intro:   1.25rem;   /* the opening paragraph          */
+      --size-heading: 1.25rem;   /* "A few things I think about..." */
+      --size-bullet:  1.25rem;   /* each bullet in the list        */
+      --size-contact: 1.25rem;   /* the "you can reach me" line     */
+
+      /* Mobile versions of the same sizes (screens under 600px) */
+      --size-name-mobile:    1.75rem;
+      --size-intro-mobile:   1.15rem;
+      --size-heading-mobile: 1.15rem;
+      --size-bullet-mobile:  1.15rem;
+      --size-contact-mobile: 1.15rem;
+    }
+    /* ===================================================== */
+
     * {
       margin: 0;
       padding: 0;
@@ -35,20 +58,20 @@
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: var(--size-name);
       font-weight: 700;
       margin-bottom: 2rem;
       letter-spacing: -0.01em;
     }
 
     p {
-      font-size: 1.25rem;
+      font-size: var(--size-intro);
       margin-bottom: 2rem;
       line-height: 1.55;
     }
 
     h2 {
-      font-size: 1.25rem;
+      font-size: var(--size-heading);
       font-weight: 400;
       margin-bottom: 1rem;
       line-height: 1.55;
@@ -62,13 +85,13 @@
     }
 
     li {
-      font-size: 1.25rem;
+      font-size: var(--size-bullet);
       line-height: 1.6;
       margin-bottom: 0.6rem;
     }
 
     .contact {
-      font-size: 1.25rem;
+      font-size: var(--size-contact);
       line-height: 1.55;
     }
 
@@ -92,13 +115,11 @@
         padding: 2rem 1.25rem;
         align-items: flex-start;
       }
-      h1 {
-        font-size: 1.75rem;
-        margin-bottom: 1.5rem;
-      }
-      p, h2, li, .contact {
-        font-size: 1.15rem;
-      }
+      h1       { font-size: var(--size-name-mobile); margin-bottom: 1.5rem; }
+      p        { font-size: var(--size-intro-mobile); }
+      h2       { font-size: var(--size-heading-mobile); }
+      li       { font-size: var(--size-bullet-mobile); }
+      .contact { font-size: var(--size-contact-mobile); }
     }
   </style>
 </head>
