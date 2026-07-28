@@ -9,23 +9,17 @@
     /* ===================================================== */
     /*  ADJUSTABLE TEXT SIZES                                */
     /*  Every text size on the page lives here.              */
-    /*  Change a number, the page updates. 1rem = 18px.      */
+    /*  Change a number, the page updates.                   */
     /*  In Chrome: Inspect, click the <html> element, and    */
     /*  edit these values live in the Styles panel.          */
     /* ===================================================== */
     :root {
-      --size-name:    2rem;      /* "Sasha Gzirian" heading        */
-      --size-intro:   1.1rem;   /* the opening paragraph          */
-      --size-heading: 1.1rem;   /* "A few things I think about..." */
-      --size-bullet:  1.1rem;   /* each bullet in the list        */
-      --size-contact: 1.1rem;   /* the "you can reach me" line     */
+      --size-intro:   12px;      /* the opening paragraph           */
+      --size-heading: 12px;      /* "Things I think about..."       */
+      --size-bullet:  12px;      /* each bullet in the list         */
+      --size-contact: 12px;      /* the "you can reach me" line     */
 
-      /* Mobile versions of the same sizes (screens under 600px) */
-      --size-name-mobile:    1.5rem;
-      --size-intro-mobile:   1rem;
-      --size-heading-mobile: 1rem;
-      --size-bullet-mobile:  1rem;
-      --size-contact-mobile: 1rem;
+      --page-width:   41.8rem;   /* how wide the text column is     */
     }
     /* ===================================================== */
 
@@ -35,112 +29,66 @@
       box-sizing: border-box;
     }
 
-    html {
-      font-size: 18px;
-    }
-
     body {
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: 400;
+      margin: 0;
+      padding: 0.75rem;
+      font: 12px/1.4 monospace;
+      color: #000;
+      max-width: var(--page-width);
       background-color: #ffffff;
-      color: #1a1a1a;
-      line-height: 1.5;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem 1.5rem;
-    }
-
-    main {
-      max-width: 32rem;
-      width: 100%;
-    }
-
-    h1 {
-      font-size: var(--size-name);
-      font-weight: 700;
-      margin-bottom: 2rem;
-      letter-spacing: -0.01em;
     }
 
     p {
       font-size: var(--size-intro);
-      margin-bottom: 2rem;
-      line-height: 1.55;
+      margin-bottom: 1.4em;
     }
 
     h2 {
       font-size: var(--size-heading);
       font-weight: 400;
-      margin-bottom: .2rem;
-      line-height: 1.55;
+      margin-bottom: 0.5em;
     }
 
     ul {
       list-style: disc;
       list-style-position: outside;
-      margin-bottom: 2.5rem;
-      padding-left: 1.5rem;
+      margin-bottom: 1.4em;
+      padding-left: 1.2em;
     }
 
     li {
       font-size: var(--size-bullet);
-      line-height: 1.6;
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.2em;
     }
 
     .contact {
       font-size: var(--size-contact);
-      line-height: 1.55;
     }
 
     a {
-      color: #0047ab;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-      transition: opacity 0.15s ease;
+      color: blue;
+      text-decoration: none;
     }
 
     a:hover {
-      opacity: 0.7;
-    }
-
-    @media (max-width: 600px) {
-      html {
-        font-size: 16px;
-      }
-      body {
-        padding: 2rem 1.25rem;
-        align-items: flex-start;
-      }
-      h1       { font-size: var(--size-name-mobile); margin-bottom: 1.5rem; }
-      p        { font-size: var(--size-intro-mobile); }
-      h2       { font-size: var(--size-heading-mobile); }
-      li       { font-size: var(--size-bullet-mobile); }
-      .contact { font-size: var(--size-contact-mobile); }
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Sasha Gzirian</h1>
+  <p>Hi, I'm Sasha. I spend my days managing technical products and my free time <a href="https://www.google.com/maps/d/u/2/edit?mid=1Y3fHLINF-_MW6Y1-Xlz4LNolWeQXdFA&usp=sharing" target="_blank" rel="noopener">mapping</a> restaurants with McDonald's-style fries.</p>
 
-    <p>Hi, I'm Sasha. I spend my days managing technical products and my free time <a href="https://www.google.com/maps/d/u/2/edit?mid=1Y3fHLINF-_MW6Y1-Xlz4LNolWeQXdFA&usp=sharing" target="_blank" rel="noopener">mapping</a> restaurants with McDonald's-style fries.</p>
+  <h2>Things I think about often:</h2>
 
-    <h2>Things I think about often:</h2>
+  <ul>
+    <li>AI ethics as a necessary companion to building AI</li>
+    <li>The gap between how something is designed and how people use it</li>
+    <li>Reality TV as sociology</li>
+    <li>The TikTok marketing to line-around-the-block pipeline</li>
+    <li>Tweaks to my Armenian gata recipe</li>
+    <li>The New York Liberty bringing the title home in 2026</li>
+  </ul>
 
-    <ul>
-      <li>AI ethics as a necessary companion to building AI</li>
-      <li>The gap between how something is designed and how people use it </li>
-      <li>Reality TV as sociology</li>
-      <li>The TikTok marketing to line-around-the-block pipeline</li>
-      <li>Tweaks to my Armenian gata recipe</li>
-      <li>The New York Liberty bringing the title home in 2026</li>
-    </ul>
-
-    <p class="contact">You can reach me at <a href="mailto:sasha@sashagzirian.com">sasha@sashagzirian.com</a> or on <a href="https://www.linkedin.com/in/sashagzirian/" target="_blank" rel="noopener">LinkedIn</a>.</p>
-  </main>
+  <p class="contact">You can reach me at <a href="mailto:sasha@sashagzirian.com">sasha@sashagzirian.com</a> or on <a href="https://www.linkedin.com/in/sashagzirian/" target="_blank" rel="noopener">LinkedIn</a>.</p>
 </body>
 </html>
